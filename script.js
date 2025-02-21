@@ -70,7 +70,7 @@ const handleFormSubmit = (e) => {
     setTimeout(() => {
         // Create bot message element first
         const botMsgDiv = createMsgElement(
-            `<img src="assets/logo.svg" alt="" class="avatar"><p class="message-text">Just a sec...</p>`,
+            `<img src="logo.svg" alt="" class="avatar"><p class="message-text">Just a sec...</p>`,
             "bot-message"
         );
 
