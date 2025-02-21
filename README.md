@@ -7,9 +7,11 @@
 3. Backend API: Google Gemini API
 4. Security: Cloudflare Workers (to protect API key)
 
+
 -> Project Overview:
 
 A simple chatbot web application that interacts with the Google Gemini API to generate AI responses. It provides a smooth chat experience with a user-friendly interface and predefined prompts for quick responses.
+
 
 -> How It Works:
 
@@ -19,3 +21,4 @@ A simple chatbot web application that interacts with the Google Gemini API to ge
 4. The API processes the input and returns a response.
 5. The response is displayed in the chat interface.
 6. User can delete the chats.
+
