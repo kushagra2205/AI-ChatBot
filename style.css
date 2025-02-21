@@ -1,0 +1,238 @@
+/* Poppins imported */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    font-family: "Poppins", serif; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Brand Colors */
+:root {
+    --text-color: #edf3ff;
+    --subheading-color: #E6E6E6;
+    --placeholder-color: #909090;
+    --primary-color: #1e1e1e;
+    --secondary-color: #373737;
+    --secondary-hover-color: #BB3F28;
+    --scrollbar-color: #626a7f;
+}
+
+body {
+    color: var(--text-color);
+    background: var(--primary-color);
+}
+
+.container {
+    padding: 32px 0 60px;
+}
+
+.container :where(.header, .suggestions, .message, .prompt-wrapper){
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+    max-width: 980px;
+}
+
+/* Header Styling */
+.container .header {
+    margin-top: 4vh;
+}
+
+.header .heading {
+    font-size: 3rem;
+    width: fit-content;
+    background-clip: text;
+    color: #FF5D36;
+}
+
+.header .sub-heading {
+    font-size: 1.8rem;
+    margin-top: -5px;
+    color: var(--subheading-color);
+}
+
+/* Suggestions Styling */
+.container .suggestions {
+    display: flex;
+    gap: 15px;
+    margin-top: 9.5vh;
+    list-style: none;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+
+
+.suggestions .suggestions-item {
+    width: 228px;
+    padding: 18px;
+    flex-shrink: 0;
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-radius: 12px;
+    background: var(--secondary-color);
+    transition: 0.3s ease;
+}
+
+.suggestions .suggestions-item:hover {
+    background: var(--secondary-hover-color);
+}
+
+.suggestions .suggestions-item .text {
+    font-size: 1.1rem;
+}
+
+.suggestions .suggestions-item span {
+    height: 45px;
+    width: 45px;
+    margin-top: 35px;
+    display: flex;
+    align-self: flex-end;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #FF5D36;
+    background: var(--primary-color);
+}
+
+/* Chats Styling */
+.container .chats-container
+{
+    max-height: calc(100vh - 150px);
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.chats-container::-webkit-scrollbar { width: 12px; }
+.chats-container::-webkit-scrollbar-thumb { background-color: var(--subheading-color); }
+.chats-container::-webkit-scrollbar-track { background: var(--secondary-color); }
+
+
+.chats-container .message {
+    display: flex;
+    gap: 11px;
+    align-items: center;
+}
+
+.chats-container .bot-message .avatar {
+    height: 43px;
+    width: 43px;
+    align-self: flex-start;
+
+}
+
+.chats-container .message .message-text {
+    padding: 3px 16px;
+    word-wrap: break-word;
+    white-space: pre-line;
+}
+
+.chats-container .bot-message {
+    margin: 9px auto;
+}
+
+.chats-container .user-message {
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.chats-container .user-message .message-text {
+    padding: 12px;
+    max-width: 75%;
+    border-radius: 13px 13px 3px 13px;
+    background: var(--secondary-color);
+}
+
+/* Prompt Styling */
+.prompt-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 16px 0;
+    background: var(--primary-color);
+}
+
+.prompt-container :where(.prompt-wrapper, .prompt-form, .prompt-actions) {
+    display: flex;
+    gap: 12px;
+    height: 56px;
+    align-items: center;
+}
+
+.prompt-wrapper .prompt-form {
+    width: 100%;
+    height: 100%;
+    border-radius: 130px;
+    background: var(--secondary-color);
+}
+
+.prompt-form .prompt-input {
+    height: 100%;
+    width: 100%;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    padding-left: 24px;
+    color: var(--text-color);
+}
+
+.prompt-form .prompt-input::placeholder {
+    color: var(--placeholder-color);
+}
+
+.prompt-wrapper button {
+    width: 56px;
+    height: 100%;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+    color: var(--text-color);
+    background: var(--secondary-color);
+    transition: 0.3s ease;
+}
+
+.prompt-wrapper button:hover {
+    background: var(--secondary-hover-color);
+}
+
+.prompt-form .prompt-actions {
+    gap: 5px;
+    margin-right: 7px;
+}
+
+.prompt-form .prompt-actions button {
+    height: 45px;
+    width: 45px;
+}
+
+.prompt-form #send-btn {
+    color: #fff;
+    display: none;
+}
+
+.prompt-form .prompt-input:valid ~ .prompt-actions #send-btn {
+    display: block;
+}
+
+.prompt-form #send-btn:hover {
+    background: #FF5D36;
+}
+
+.copyright {
+    font-size: 0.8em;
+    display: flex;
+    justify-content: center;
+    padding-top: 12px;
+}
